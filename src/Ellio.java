@@ -15,7 +15,7 @@ public class Ellio  {
         while (true) {
             ellioFrame.getContentPane().repaint();
             try {
-                Thread.sleep(30);
+                Thread.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

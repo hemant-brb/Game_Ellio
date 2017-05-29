@@ -1,6 +1,7 @@
 package frames;
 
 import panels.GamePanel;
+import panels.MenuPanel;
 
 import javax.swing.*;
 import java.awt.*;

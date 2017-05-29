@@ -10,6 +10,7 @@ import java.awt.event.KeyListener;
 public class MenuPanel extends EllioPanel implements KeyListener {
 
     public MenuPanel() {
+        setBackground(Color.darkGray);
         setFocusable(true);
         requestFocusInWindow();
         addKeyListener(this);

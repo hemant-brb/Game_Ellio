@@ -17,7 +17,7 @@ public class GamePanel extends EllioPanel implements KeyListener {
     private static final int PLAYER_VELOCITY_Y = -20;
     private static final int PLAYER_DEFAULT_ACC_Y = 0;
     private static final int PLAYER_ACC_Y = 1;
-    private static final int BLOCK_VELOCITY_X = -3;
+    private static final int BLOCK_VELOCITY_X = -2;
     private static final int WINDOW_X = 0;
     private static final int WINDOW_Y = 0;
     private static final int WINDOW_WIDTH = 800;
@@ -36,9 +36,9 @@ public class GamePanel extends EllioPanel implements KeyListener {
     private int block2X = 740;
     private int block3X = 1060;
     private int block1Y = 355;
-    private int block2Y = 290;
-    private int block3Y = 230;
-    private int blockY[] = {355, 290, 230};
+    private int block2Y = 300;
+    private int block3Y = 270;
+    private int blockY[] = {355, 300, 270, 285, 340};
     private int playerY = PLAYER_Y;
     private int playerVelocityY = 0;
     private int playerAccY = 0;
@@ -117,17 +117,17 @@ public class GamePanel extends EllioPanel implements KeyListener {
         if (block1X <= WINDOW_X_OFFSET) {
             block1Visible = true;
             block1X = WINDOW_Y_OFFSET;
-            block1Y = blockY[generator.nextInt(3)];
+            block1Y = blockY[generator.nextInt(5)];
         }
         if (block2X <= WINDOW_X_OFFSET) {
             block2Visible = true;
             block2X = WINDOW_Y_OFFSET;
-            block2Y = blockY[generator.nextInt(3)];
+            block2Y = blockY[generator.nextInt(5)];
         }
         if (block3X <= WINDOW_X_OFFSET) {
             block3Visible = true;
             block3X = WINDOW_Y_OFFSET;
-            block3Y = blockY[generator.nextInt(3)];
+            block3Y = blockY[generator.nextInt(5)];
         }
 
         block1X += BLOCK_VELOCITY_X;
@@ -161,7 +161,7 @@ public class GamePanel extends EllioPanel implements KeyListener {
         playerVelocityY += playerAccY;
         if (!isPlayerDuck)// we don't want to change the Y Coordinates if the Player is in Duck Position
             playerY += playerVelocityY;
-        if (playerVelocityY == 20) {
+        if (playerVelocityY == 17) {
             isPlayerDuck = false;
         }
         if (playerY > PLAYER_Y) {
@@ -179,8 +179,10 @@ public class GamePanel extends EllioPanel implements KeyListener {
         }
         if (isPlayerDuck) {
             this.playerImage = player_duck;
+            playerRectangle = new Rectangle(PLAYER_X, playerY + 20, 72, 70);
+        } else {
+            playerRectangle = new Rectangle(PLAYER_X, playerY, 72, 90);
         }
-        playerRectangle = new Rectangle(PLAYER_X, playerY, 72, 90);
     }
 
 
