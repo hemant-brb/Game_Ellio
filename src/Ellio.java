@@ -6,7 +6,7 @@ import java.awt.event.KeyListener;
 /**
  * Created by Hemant Saini on 29-05-2017.
  */
-public class Ellio implements KeyListener {
+public class Ellio  {
     public static void main(String[] args) {
 
         EllioFrame ellioFrame = new EllioFrame();
@@ -14,7 +14,6 @@ public class Ellio implements KeyListener {
 
         while (true) {
             ellioFrame.getContentPane().repaint();
-//            ellioFrame.repaint(); TODO check which one is convenient
             try {
                 Thread.sleep(30);
             } catch (InterruptedException e) {
@@ -24,20 +23,4 @@ public class Ellio implements KeyListener {
 
     }
 
-    @Override
-    public void keyTyped(KeyEvent e) {
-        System.out.print("abefe");
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-        System.out.print("abefe");
-
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-        System.out.print("abefe");
-
-    }
 }

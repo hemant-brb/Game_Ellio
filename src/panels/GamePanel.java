@@ -3,15 +3,13 @@ package panels;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
 /**
  * Created by Hemant Saini on 29-05-2017.
  */
-public class GamePanel extends EllioPanel implements KeyListener, MouseListener {
+public class GamePanel extends EllioPanel implements KeyListener {
 
     private static final int PLAYER_Y = 312;
     private static final int PLAYER_X = 100;
@@ -78,7 +76,6 @@ public class GamePanel extends EllioPanel implements KeyListener, MouseListener 
         setFocusable(true);
         requestFocusInWindow();
         addKeyListener(this);
-        addMouseListener(this);
     }
 
     @Override
@@ -214,34 +211,6 @@ public class GamePanel extends EllioPanel implements KeyListener, MouseListener 
 
     @Override
     public void keyReleased(KeyEvent e) {
-    }
-
-
-    @Override
-    public void mouseClicked(MouseEvent e) {
-        if (e.getX() > 750 && e.getY() < 50) {
-            this.isPaused = !this.isPaused;
-        }
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-
     }
 
 }
