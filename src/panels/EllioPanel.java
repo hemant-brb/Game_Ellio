@@ -17,7 +17,7 @@ public class EllioPanel extends JPanel {
     protected static BufferedImage loadImage(String filename) {
         BufferedImage img = null;
         try {
-            img = ImageIO.read(MainAnimationPanel.class
+            img = ImageIO.read(GamePanel.class
                     .getResourceAsStream("/" + filename));
         } catch (IOException e) {
             System.out.println("Error while reading: " + filename);

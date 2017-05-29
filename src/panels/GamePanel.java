@@ -11,7 +11,7 @@ import java.util.Random;
 /**
  * Created by Hemant Saini on 29-05-2017.
  */
-public class MainAnimationPanel extends EllioPanel implements KeyListener, MouseListener {
+public class GamePanel extends EllioPanel implements KeyListener, MouseListener {
 
     private static final int PLAYER_Y = 312;
     private static final int PLAYER_X = 100;
@@ -58,23 +58,23 @@ public class MainAnimationPanel extends EllioPanel implements KeyListener, Mouse
     private Random generator = new Random();
 
 
-    private BufferedImage player_run1 = MainAnimationPanel.loadImage("run_anim1.png");
-    private BufferedImage player_run2 = MainAnimationPanel.loadImage("run_anim2.png");
-    private BufferedImage player_run3 = MainAnimationPanel.loadImage("run_anim3.png");
-    private BufferedImage player_run4 = MainAnimationPanel.loadImage("run_anim4.png");
-    private BufferedImage player_run5 = MainAnimationPanel.loadImage("run_anim5.png");
-    private BufferedImage player_jump = MainAnimationPanel.loadImage("jump.png");
-    private BufferedImage player_duck = MainAnimationPanel.loadImage("duck.png");
-    private BufferedImage block = MainAnimationPanel.loadImage("block.png");
-    private BufferedImage playerImage = MainAnimationPanel.loadImage("run_anim1.png");
-    private BufferedImage grassImage = MainAnimationPanel.loadImage("grass.png");
-    private BufferedImage cloud1Image = MainAnimationPanel.loadImage("cloud1.png");
-    private BufferedImage cloud2Image = MainAnimationPanel.loadImage("cloud2.png");
+    private BufferedImage player_run1 = GamePanel.loadImage("run_anim1.png");
+    private BufferedImage player_run2 = GamePanel.loadImage("run_anim2.png");
+    private BufferedImage player_run3 = GamePanel.loadImage("run_anim3.png");
+    private BufferedImage player_run4 = GamePanel.loadImage("run_anim4.png");
+    private BufferedImage player_run5 = GamePanel.loadImage("run_anim5.png");
+    private BufferedImage player_jump = GamePanel.loadImage("jump.png");
+    private BufferedImage player_duck = GamePanel.loadImage("duck.png");
+    private BufferedImage block = GamePanel.loadImage("block.png");
+    private BufferedImage playerImage = GamePanel.loadImage("run_anim1.png");
+    private BufferedImage grassImage = GamePanel.loadImage("grass.png");
+    private BufferedImage cloud1Image = GamePanel.loadImage("cloud1.png");
+    private BufferedImage cloud2Image = GamePanel.loadImage("cloud2.png");
     private BufferedImage playerImages[] = {player_run1, player_run2, player_run3, player_run4,
             player_run5, player_run4, player_run3, player_run2};
 
 
-    public MainAnimationPanel() {
+    public GamePanel() {
         setFocusable(true);
         requestFocusInWindow();
         addKeyListener(this);

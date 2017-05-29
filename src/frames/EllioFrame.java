@@ -1,9 +1,8 @@
 package frames;
 
-import panels.MainAnimationPanel;
+import panels.GamePanel;
 
 import javax.swing.*;
-import javax.swing.plaf.DimensionUIResource;
 import java.awt.*;
 
 /**
@@ -20,7 +19,7 @@ public class EllioFrame extends JFrame {
         setPreferredSize(new Dimension(WINDOW_WIDTH,WINDOW_HEIGHT));
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setContentPane(new MainAnimationPanel());
+        setContentPane(new GamePanel());
         pack();
         setVisible(true);
 
