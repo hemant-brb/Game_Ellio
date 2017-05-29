@@ -27,6 +27,7 @@ public class MainAnimationPanel extends EllioPanel implements KeyListener, Mouse
     private static final int GRASS_X = 0;
     private static final int GRASS_Y = 405;
     private static final int WINDOW_X_OFFSET = -100;
+    private static final int WINDOW_Y_OFFSET = 900;
 
 
     private int cloud1X = 400;
@@ -43,9 +44,19 @@ public class MainAnimationPanel extends EllioPanel implements KeyListener, Mouse
     private int playerY = PLAYER_Y;
     private int playerVelocityY = 0;
     private int playerAccY = 0;
-    private boolean cloud1Visible = true;
+    private boolean block1Visible = true;
+    private boolean block2Visible = true;
+    private boolean block3Visible = true;
     private boolean isPaused = false;
     private boolean isPlayerDuck = false;
+
+    private int counter = 0;
+    private Rectangle playerRectangle;
+    private Rectangle block1Rectangle;
+    private Rectangle block2Rectangle;
+    private Rectangle block3Rectangle;
+    private Random generator = new Random();
+
 
     private BufferedImage player_run1 = MainAnimationPanel.loadImage("run_anim1.png");
     private BufferedImage player_run2 = MainAnimationPanel.loadImage("run_anim2.png");
@@ -61,11 +72,6 @@ public class MainAnimationPanel extends EllioPanel implements KeyListener, Mouse
     private BufferedImage cloud2Image = MainAnimationPanel.loadImage("cloud2.png");
     private BufferedImage playerImages[] = {player_run1, player_run2, player_run3, player_run4,
             player_run5, player_run4, player_run3, player_run2};
-
-    private int counter = 0;
-    private Rectangle playerRectangle;
-    private Rectangle cloud1Rectangle;
-    private Random generator = new Random();
 
 
     public MainAnimationPanel() {
@@ -84,34 +90,46 @@ public class MainAnimationPanel extends EllioPanel implements KeyListener, Mouse
         hideObjects();
         g.setColor(Color.blue);
         g.fillRect(WINDOW_X, WINDOW_Y, WINDOW_WIDTH, WINDOW_HEIGHT);
-        if (this.cloud1Visible) {
-            g.drawImage(cloud1Image, cloud1X, cloud1Y, null);
-        }
+        g.drawImage(cloud1Image, cloud1X, cloud1Y, null);
         g.drawImage(cloud2Image, cloud2X, cloud2Y, null);
         g.drawImage(playerImage, PLAYER_X, playerY, null);
         g.drawImage(grassImage, GRASS_X, GRASS_Y, null);
-        g.drawImage(block, block1X, block1Y, null);
-        g.drawImage(block, block2X, block2Y, null);
-        g.drawImage(block, block3X, block3Y, null);
+        if (block1Visible)
+            g.drawImage(block, block1X, block1Y, null);
+        if (block2Visible)
+            g.drawImage(block, block2X, block2Y, null);
+        if (block3Visible)
+            g.drawImage(block, block3X, block3Y, null);
     }
 
     private void hideObjects() {
-        if (playerRectangle.intersects(cloud1Rectangle)) {
-            cloud1Visible = false;
+        if (playerRectangle.intersects(block1Rectangle)) {
+            block1Visible = false;
         }
+        if (playerRectangle.intersects(block2Rectangle)) {
+            block2Visible = false;
+        }
+        if (playerRectangle.intersects(block3Rectangle)) {
+            block3Visible = false;
+        }
+
     }
 
     private void animateHurdles() {
+
         if (block1X <= WINDOW_X_OFFSET) {
-            block1X = 900;
+            block1Visible = true;
+            block1X = WINDOW_Y_OFFSET;
             block1Y = blockY[generator.nextInt(3)];
         }
         if (block2X <= WINDOW_X_OFFSET) {
-            block2X = 900;
+            block2Visible = true;
+            block2X = WINDOW_Y_OFFSET;
             block2Y = blockY[generator.nextInt(3)];
         }
         if (block3X <= WINDOW_X_OFFSET) {
-            block3X = 900;
+            block3Visible = true;
+            block3X = WINDOW_Y_OFFSET;
             block3Y = blockY[generator.nextInt(3)];
         }
 
@@ -119,24 +137,26 @@ public class MainAnimationPanel extends EllioPanel implements KeyListener, Mouse
         block2X += BLOCK_VELOCITY_X;
         block3X += BLOCK_VELOCITY_X;//TODO increase the Block velocity
 
+        block1Rectangle = new Rectangle(block1X, block1Y, 20, 50);
+        block2Rectangle = new Rectangle(block2X, block2Y, 20, 50);
+        block3Rectangle = new Rectangle(block3X, block3Y, 20, 50);
+
     }
 
     private void animateCloud() {
         if (cloud1X <= WINDOW_X_OFFSET) {
             cloud1Y = generator.nextInt(190) + 10;
-            cloud1X = 900;
-            cloud1Visible = true;
+            cloud1X = WINDOW_Y_OFFSET;
         }
 
         if (cloud2X <= WINDOW_X_OFFSET) {
             cloud2Y = generator.nextInt(190) + 10;
-            cloud2X = 900;
+            cloud2X = WINDOW_Y_OFFSET;
         }
 
         cloud1X -= 2;
         cloud2X -= 2;
-        cloud1Rectangle = new Rectangle(cloud1X, cloud1Y, 128, 71);
-
+//        cloud1Rectangle = new Rectangle(cloud1X, cloud1Y, 128, 71);
     }
 
 
