@@ -1,5 +1,6 @@
 package panels;
 
+import javax.swing.plaf.FontUIResource;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -17,7 +18,7 @@ public class GamePanel extends EllioPanel implements KeyListener {
     private static final int PLAYER_VELOCITY_Y = -20;
     private static final int PLAYER_DEFAULT_ACC_Y = 0;
     private static final int PLAYER_ACC_Y = 1;
-    private static final int BLOCK_VELOCITY_X = -2;
+    private static final int BLOCK_VELOCITY_X = -4;
     private static final int WINDOW_X = 0;
     private static final int WINDOW_Y = 0;
     private static final int WINDOW_WIDTH = 800;
@@ -48,6 +49,7 @@ public class GamePanel extends EllioPanel implements KeyListener {
     private boolean isPaused = false;
     private boolean isPlayerDuck = false;
 
+    private int score = 0;
     private int counter = 0;
     private Rectangle playerRectangle;
     private Rectangle block1Rectangle;
@@ -55,6 +57,7 @@ public class GamePanel extends EllioPanel implements KeyListener {
     private Rectangle block3Rectangle;
     private Random generator = new Random();
 
+    private Label scoreLabel;
 
     private BufferedImage player_run1 = GamePanel.loadImage("run_anim1.png");
     private BufferedImage player_run2 = GamePanel.loadImage("run_anim2.png");
@@ -73,10 +76,12 @@ public class GamePanel extends EllioPanel implements KeyListener {
 
 
     public GamePanel() {
+        scoreLabel = new Label();
         setFocusable(true);
         requestFocusInWindow();
         addKeyListener(this);
     }
+
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -91,6 +96,9 @@ public class GamePanel extends EllioPanel implements KeyListener {
         g.drawImage(cloud2Image, cloud2X, cloud2Y, null);
         g.drawImage(playerImage, PLAYER_X, playerY, null);
         g.drawImage(grassImage, GRASS_X, GRASS_Y, null);
+        g.setColor(Color.white);
+        g.setFont(new Font("Arial", Font.PLAIN, 20));
+        g.drawString("Score : " + score, 700, 40);
         if (block1Visible)
             g.drawImage(block, block1X, block1Y, null);
         if (block2Visible)
@@ -115,16 +123,22 @@ public class GamePanel extends EllioPanel implements KeyListener {
     private void animateHurdles() {
 
         if (block1X <= WINDOW_X_OFFSET) {
+            if (block1Visible)
+                score++;
             block1Visible = true;
             block1X = WINDOW_Y_OFFSET;
             block1Y = blockY[generator.nextInt(5)];
         }
         if (block2X <= WINDOW_X_OFFSET) {
+            if (block2Visible)
+                score++;
             block2Visible = true;
             block2X = WINDOW_Y_OFFSET;
             block2Y = blockY[generator.nextInt(5)];
         }
         if (block3X <= WINDOW_X_OFFSET) {
+            if (block3Visible)
+                score++;
             block3Visible = true;
             block3X = WINDOW_Y_OFFSET;
             block3Y = blockY[generator.nextInt(5)];
@@ -179,9 +193,9 @@ public class GamePanel extends EllioPanel implements KeyListener {
         }
         if (isPlayerDuck) {
             this.playerImage = player_duck;
-            playerRectangle = new Rectangle(PLAYER_X, playerY + 20, 72, 70);
+            playerRectangle = new Rectangle(PLAYER_X + 10, playerY + 20, 62, 70);
         } else {
-            playerRectangle = new Rectangle(PLAYER_X, playerY, 72, 90);
+            playerRectangle = new Rectangle(PLAYER_X + 10, playerY, 62, 90);
         }
     }
 
