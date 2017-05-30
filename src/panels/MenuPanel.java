@@ -13,6 +13,7 @@ import java.awt.image.BufferedImage;
  */
 public class MenuPanel extends EllioPanel implements KeyListener {
 
+
     private static final int PLAYER_Y = 312;
     private static final int PLAYER_X = 100;
     private static final int GRASS_X = 0;
@@ -25,8 +26,8 @@ public class MenuPanel extends EllioPanel implements KeyListener {
     private BufferedImage player_duck = GamePanel.loadImage("duck.png");
     private BufferedImage grassImage = GamePanel.loadImage("grass.png");
     private JLabel jLabel = new JLabel();
-    private JButton jButtonPlay = new JButton();
-    private JButton jButtonExit = new JButton();
+    public JButton jButtonPlay = new JButton();
+    public JButton jButtonExit = new JButton();
 
 
     public MenuPanel() {
@@ -37,61 +38,9 @@ public class MenuPanel extends EllioPanel implements KeyListener {
 //        jLabel.setText("<html><font color='white'>Ellio</font></html>");
 //        jLabel.setBounds(100, 20, 300, 60);
 
+
         jButtonPlay.setPreferredSize(new Dimension(100, 50));
         jButtonPlay.setText("Play");
-        jButtonPlay.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mousePressed(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mouseEntered(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-
-            }
-        });
-
-        jButtonExit.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mousePressed(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mouseEntered(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-
-            }
-        });
         jButtonExit.setPreferredSize(new Dimension(100, 50));
         jButtonExit.setText("Exit");
 
@@ -131,4 +80,5 @@ public class MenuPanel extends EllioPanel implements KeyListener {
     public void keyReleased(KeyEvent e) {
 
     }
+
 }
