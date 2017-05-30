@@ -19,6 +19,7 @@ public class EllioFrame extends JFrame {
     private MenuPanel menuPanel;
 
     public EllioFrame() {
+
         setPreferredSize(new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT));
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

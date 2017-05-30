@@ -116,6 +116,7 @@ public class GamePanel extends EllioPanel implements KeyListener {
             block3Visible = false;
         }
 
+
     }
 
     private void animateHurdles() {

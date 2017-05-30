@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0beb0cd8-415f-4b85-9506-a1323b28f229" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\Hemant Saini\IdeaProjects\Ellio\out\production\Ellio\frames\EllioFrame$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Hemant Saini\IdeaProjects\Ellio\out\production\Ellio\frames\EllioFrame$2.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Ellio/Ellio.class" afterPath="$PROJECT_DIR$/out/production/Ellio/Ellio.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Ellio/frames/EllioFrame.class" afterPath="$PROJECT_DIR$/out/production/Ellio/frames/EllioFrame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Ellio/panels/GamePanel.class" afterPath="$PROJECT_DIR$/out/production/Ellio/panels/GamePanel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ellio.java" afterPath="$PROJECT_DIR$/src/Ellio.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frames/EllioFrame.java" afterPath="$PROJECT_DIR$/src/frames/EllioFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/panels/MenuPanel.java" afterPath="$PROJECT_DIR$/src/panels/MenuPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/panels/GamePanel.java" afterPath="$PROJECT_DIR$/src/panels/GamePanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frames/MenuFrame.java" afterPath="$PROJECT_DIR$/src/frames/MenuFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Ellio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,17 +38,31 @@
         <entry file="file://$PROJECT_DIR$/src/frames/EllioFrame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuFrame.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MenuFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frames/MenuFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5427873">
-              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#607#608#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frames/GameFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/src/panels/GamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="102" column="42" selection-start-line="102" selection-start-column="42" selection-end-line="102" selection-end-column="42" />
+              <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ellio.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Ellio.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Ellio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.6997793">
+              <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,11 +143,12 @@
         <option value="$PROJECT_DIR$/src/panels/EllioPanel.java" />
         <option value="$PROJECT_DIR$/src/panels/MainAnimationPanel.java" />
         <option value="$PROJECT_DIR$/src/panels/ScorePanel.java" />
-        <option value="$PROJECT_DIR$/src/Ellio.java" />
-        <option value="$PROJECT_DIR$/src/panels/GamePanel.java" />
         <option value="$PROJECT_DIR$/src/panels/MenuPanel.java" />
-        <option value="$PROJECT_DIR$/src/frames/EllioFrame.java" />
         <option value="$PROJECT_DIR$/src/frames/MenuFrame.java" />
+        <option value="$PROJECT_DIR$/src/panels/GamePanel.java" />
+        <option value="$PROJECT_DIR$/src/frames/GameFrame.java" />
+        <option value="$PROJECT_DIR$/src/frames/EllioFrame.java" />
+        <option value="$PROJECT_DIR$/src/Ellio.java" />
       </list>
     </option>
   </component>
@@ -550,12 +573,12 @@
       <workItem from="1496064676601" duration="3081000" />
       <workItem from="1496076683597" duration="11853000" />
       <workItem from="1496115005179" duration="4555000" />
-      <workItem from="1496149615726" duration="7388000" />
+      <workItem from="1496149615726" duration="8461000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26877000" />
+    <option name="totallyTimeSpent" value="27950000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -569,7 +592,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2859477" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21405229" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -792,29 +815,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ellio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/run_anim1.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/panels/GamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="102" column="42" selection-start-line="102" selection-start-column="42" selection-end-line="102" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/panels/MenuPanel.java">
@@ -827,18 +830,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/frames/MenuFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panels/GamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frames/GameFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/frames/EllioFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frames/MenuFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/Ellio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5427873">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.6997793">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

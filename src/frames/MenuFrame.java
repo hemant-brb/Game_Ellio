@@ -23,7 +23,7 @@ public class MenuFrame extends EllioFrame {
         menuPanel.jButtonPlay.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                
+                new GameFrame();
             }
 
             @Override
