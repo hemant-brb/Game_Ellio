@@ -1,6 +1,5 @@
 package panels;
 
-import javax.swing.plaf.FontUIResource;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -46,7 +45,6 @@ public class GamePanel extends EllioPanel implements KeyListener {
     private boolean block1Visible = true;
     private boolean block2Visible = true;
     private boolean block3Visible = true;
-    private boolean isPaused = false;
     private boolean isPlayerDuck = false;
 
     private int score = 0;
@@ -57,7 +55,6 @@ public class GamePanel extends EllioPanel implements KeyListener {
     private Rectangle block3Rectangle;
     private Random generator = new Random();
 
-    private Label scoreLabel;
 
     private BufferedImage player_run1 = GamePanel.loadImage("run_anim1.png");
     private BufferedImage player_run2 = GamePanel.loadImage("run_anim2.png");
@@ -76,10 +73,11 @@ public class GamePanel extends EllioPanel implements KeyListener {
 
 
     public GamePanel() {
-        scoreLabel = new Label();
+
         setFocusable(true);
         requestFocusInWindow();
         addKeyListener(this);
+
     }
 
 
